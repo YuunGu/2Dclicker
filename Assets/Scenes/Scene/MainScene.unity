@@ -6973,6 +6973,7 @@ GameObject:
   - component: {fileID: 1198659502}
   - component: {fileID: 1198659501}
   - component: {fileID: 1198659500}
+  - component: {fileID: 1198659503}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -7068,6 +7069,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1198659503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1198659499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b86c6b1c9763f144e997b0ac92c53a75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1234105513
 GameObject:
   m_ObjectHideFlags: 0
@@ -8645,6 +8658,7 @@ GameObject:
   - component: {fileID: 1547344804}
   - component: {fileID: 1547344803}
   - component: {fileID: 1547344802}
+  - component: {fileID: 1547344805}
   m_Layer: 5
   m_Name: Button (Legacy)
   m_TagString: Untagged
@@ -8715,7 +8729,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1547344803}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1547344805}
+        m_TargetAssemblyTypeName: MenuOpenClose, Assembly-CSharp
+        m_MethodName: OpenMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1547344803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8754,6 +8780,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1547344800}
   m_CullTransparentMesh: 1
+--- !u!114 &1547344805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1547344800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18aecfedaa93a8b4b827c2d25195ec6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  openMenu: {fileID: 1254768022}
 --- !u!1 &1557770478
 GameObject:
   m_ObjectHideFlags: 0
@@ -9820,6 +9859,7 @@ GameObject:
   - component: {fileID: 1766470990}
   - component: {fileID: 1766470989}
   - component: {fileID: 1766470991}
+  - component: {fileID: 1766470992}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -9915,6 +9955,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1766470992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1766470988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8a1764da4d1d514fa4e64f86373106a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1780151533
 GameObject:
   m_ObjectHideFlags: 0
