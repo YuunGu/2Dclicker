@@ -3,12 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerState : MonoBehaviour
 {
     [SerializeField] private float baseAtkPower;
     public TextMeshProUGUI text;
     private int playerGold;
+    public TextMeshProUGUI upgradegold;
 
     private void Awake()
     {
@@ -18,6 +20,7 @@ public class PlayerState : MonoBehaviour
     private void Start()
     {
         StartCoroutine(AutoTouch());
+        upgradegold.text = (baseAtkPower * 2).ToString();
     }
 
     private void Update()
@@ -34,11 +37,7 @@ public class PlayerState : MonoBehaviour
     {
         text.text = ((int.Parse(text.text) + 1) + baseAtkPower).ToString();
         playerGold = int.Parse(text.text);
-    }
-
-    public float GetBaseAtkPower()
-    {
-        return baseAtkPower;
+        GameManager.Instance._enemy.enemyHpControl.HpCheck(baseAtkPower);
     }
 
     public void UpgradeAtk()
@@ -48,6 +47,7 @@ public class PlayerState : MonoBehaviour
             playerGold -= (int)baseAtkPower * 2;
             text.text = playerGold.ToString();
             baseAtkPower++;
+            upgradegold.text = (baseAtkPower * 2).ToString();
         }
         else
         {
